@@ -1,10 +1,19 @@
 import scrapy
+import pymongo
 
+# Configurer la connexion MongoDB
+MONGODB_URI = 'mongodb://localhost:27017/'
+MONGODB_DB = 'rotten_tomatoes_db'
+
+# Initialiser la connexion MongoDB
+client = pymongo.MongoClient(MONGODB_URI)
+db = client[MONGODB_DB]
 
 class RottenTomatoesSpider(scrapy.Spider):
     name = "rotten_tomatoes"
     start_urls = start_urls = ['https://www.rottentomatoes.com/browse/movies_at_home/sort:popular?page=5']
-    download_delay = 2
+    download_delay = 1
+
 
     def parse(self, response):
         # Sélectionnez tous les éléments de film sur la page
@@ -45,13 +54,19 @@ class RottenTomatoesSpider(scrapy.Spider):
         audiencescore = response.meta['audiencescore']
         criticsscore = response.meta['criticsscore']
 
-        yield {
+         # Stocker les données dans MongoDB
+        movie_data = {
             'Title': title,
             'Date': date,
             'Audience Score': audiencescore,
             'Critics Score': criticsscore,
             'Genre': genre,
-        }
+            }
+
+        # Insérer les données dans la collection 'movies'
+        db.movies.insert_one(movie_data)
+
+        yield movie_data
 
 
     def clean_text(self, text):
