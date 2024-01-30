@@ -8,7 +8,7 @@ Assurez-vous d'installer les bibliothèques nécessaires avant d'exécuter le pr
 
 ```bash
 pip install pymongo dash plotly scrapy
-
+```
 
 ## Configuration de la connexion MongoDB
 
