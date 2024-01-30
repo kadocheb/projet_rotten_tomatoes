@@ -8,3 +8,8 @@ Assurez-vous d'installer les bibliothèques nécessaires avant d'exécuter le pr
 
 ```bash
 pip install pymongo dash plotly scrapy
+
+
+## Configuration de la connexion MongoDB
+
+Avant d'exécuter le script de scraping, assurez-vous d'avoir une instance MongoDB en cours d'exécution. Vous pouvez configurer la connexion MongoDB dans le script spider.py et dans le script principal dashboard.py en modifiant la variable MONGODB_URI selon vos paramètres.
