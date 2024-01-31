@@ -1,0 +1,5 @@
+pymongo
+scrapy
+dash
+plotly
+plotly.express
