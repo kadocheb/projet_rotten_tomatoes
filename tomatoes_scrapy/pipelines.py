@@ -5,21 +5,9 @@
 
 
 # useful for handling different item types with a single interface
+from itemadapter import ItemAdapter
 
-import pymongo
 
-class MongoPipeline(object):
-    collection_name = 'films'
-
-    def open_spider(self, spider):
-        self.client = pymongo.MongoClient('mongodb://localhost:27017/')
-        self.db = self.client['rotten_tomatoes_db']
-
-    def close_spider(self, spider):
-        self.client.close()
-
+class RtProjetPipeline:
     def process_item(self, item, spider):
-        print("Inserting item into MongoDB:", item)
-        self.db[self.collection_name].insert_one(dict(item))
         return item
-
