@@ -62,6 +62,7 @@ bson = "*"
 elasticsearch = "==6.8.2"
 scrapy = "*"
 dash = "*"
+"plotly.express" = "*"
 
 [dev-packages]
 
