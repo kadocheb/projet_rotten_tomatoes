@@ -5,9 +5,8 @@
 
 import scrapy
 
-class FilmItem(scrapy.Item):
-    title = scrapy.Field()
-    date = scrapy.Field()
-    audience_score = scrapy.Field()
-    critics_score = scrapy.Field()
-    genre = scrapy.Field()
+
+class RtProjetItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    pass
