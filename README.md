@@ -46,8 +46,8 @@ Assurez-vous que l'environnement virtuel dans lequel vous exécutez le script di
 ![image](https://github.com/kadocheb/projet_rotten_tomatoes/assets/134379752/61c999b2-c2c4-4cb3-be6d-f26fb261fb12)
 
 
-## Description technique
-# Scrapy
+# Description technique
+## Scrapy
 Le spider tomatoes.py est un script Python conçu pour le web scraping, utilisant le framework Scrapy. L'objectif principal de ce spider est d'extraire des informations spécifiques sur les films à partir du site web Rotten Tomatoes, puis de les stocker dans une base de données MongoDB. Voici une description technique détaillée de son fonctionnement :
 
   -Initialisation et Configuration :
@@ -76,7 +76,7 @@ Chaque film est enregistré en tant que document JSON dans la collection.
   -Nettoyage de Texte :
 La méthode clean_text est définie pour nettoyer les chaînes de texte extraites en supprimant les espaces blancs inutiles et les caractères spéciaux.
 
-# Dashboard
+## Dashboard
 Le dashboard Dash est une autre partie du script qui utilise les données extraites par le spider pour générer des visualisations interactives. Voici une description technique de son fonctionnement :
 
   -Initialisation et Configuration :
