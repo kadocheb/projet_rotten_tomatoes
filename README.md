@@ -9,6 +9,9 @@ Assurez-vous d'installer le pipenv cela peut prendre un petit temps:
 
 ```bash
 pipenv install
+
+#puis lorsque l'install est fini
+pipenv shell
 ```
 
 ## Configuration de la connexion MongoDB
