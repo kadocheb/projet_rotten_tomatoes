@@ -43,6 +43,8 @@ python app.py
 L'application sera accessible à l'adresse http://127.0.0.1:8050/ dans votre navigateur.
 
 Assurez-vous que l'environnement virtuel dans lequel vous exécutez le script dispose de toutes les bibliothèques nécessaires installées (noramlement en respectant les prérequis cela doit bien marcher).
+![image](https://github.com/kadocheb/projet_rotten_tomatoes/assets/134379752/6a49d7d7-263e-4050-8af1-b19efc1b22ce)
+
 ![image](https://github.com/kadocheb/projet_rotten_tomatoes/assets/134379752/61c999b2-c2c4-4cb3-be6d-f26fb261fb12)
 
 
